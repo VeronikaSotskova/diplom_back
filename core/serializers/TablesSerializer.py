@@ -8,7 +8,7 @@ class TablesSerializer(serializers.ModelSerializer):
     value = serializers.IntegerField()
 
     def to_representation(self, instance):
-        instance.value = 10
+        instance.value = 1
         instance.has_children = False
         representation = super().to_representation(instance)
         return representation
